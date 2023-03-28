@@ -1,24 +1,24 @@
-package intellijConfigWriter;
+package model.intellij;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
-@XmlRootElement(name = "component")
-public class XmlMainConfiguration implements Serializable {
+@XmlRootElement
+public class component implements Serializable {
     @XmlAttribute
     private String name;
     @XmlElement
     private Configuration configuration;
 
-    public XmlMainConfiguration(String name, Configuration configuration) {
+    public component(String name, Configuration configuration) {
         this.name = name;
         this.configuration = configuration;
     }
 
 
-    public XmlMainConfiguration() {
+    public component() {
 
     }
 

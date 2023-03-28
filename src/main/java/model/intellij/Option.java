@@ -1,29 +1,23 @@
-package eclipseConfigReader;
+package model.intellij;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Attribute {
+public class Option {
     @XmlAttribute
-    private String key;
+    private String name;
     @XmlAttribute
     private String value;
-    public String getKey() {
-        return key;
-    }
-    public void setKey(String key) {
-        this.key = key;
-    }
 
-    public String getValue() {
-        return value;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setValue(String value) {
         this.value = value;
     }
 
-    public Attribute(){}
 }

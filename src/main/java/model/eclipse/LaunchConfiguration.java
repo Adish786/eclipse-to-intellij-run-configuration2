@@ -1,8 +1,4 @@
-package eclipseConfigReader;
-
-import eclipseConfigReader.Attribute;
-import eclipseConfigReader.ListAttribute;
-import eclipseConfigReader.MapAttribute;
+package model.eclipse;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;

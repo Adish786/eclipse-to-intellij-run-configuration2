@@ -1,4 +1,4 @@
-package eclipseConfigReader;
+package model.eclipse;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

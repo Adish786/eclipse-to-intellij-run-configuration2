@@ -1,6 +1,6 @@
-import eclipseConfigReader.LaunchConfiguration;
-import intellijConfigWriter.*;
-import intellijConfigWriter.Module;
+import model.eclipse.LaunchConfiguration;
+import model.intellij.*;
+import model.intellij.Module;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -25,18 +25,18 @@ public class ConfigurationConvertor {
         JAXBContext jaxbContextInstance = JAXBContext.newInstance(LaunchConfiguration.class);
         Marshaller jaxbMarshaller = jaxbContextInstance.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        JAXBContext contextObj = JAXBContext.newInstance(XmlMainConfiguration.class);
+        JAXBContext contextObj = JAXBContext.newInstance(component.class);
         Marshaller marshallerObj = contextObj.createMarshaller();
         marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshallerObj.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
         String fullyQualifiedMainClassName = getFullQualifiedMainClass(launchConfiguration);
         String mainClassName = getMainClassName(fullyQualifiedMainClassName);
         Configuration configuration = generateConfiguration(launchConfiguration, mainClassName, fullyQualifiedMainClassName);
-        XmlMainConfiguration xmlMainConfiguration = new XmlMainConfiguration("ProjectRunConfigurationManager", configuration);
+        component component = new component("ProjectRunConfigurationManager", configuration);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        marshallerObj.marshal(xmlMainConfiguration, outputStream);
+        marshallerObj.marshal(component, outputStream);
         String outputFileName = mainClassName + "-run-intellij.xml";
-        marshallerObj.marshal(xmlMainConfiguration, new File(outputFileName));
+        marshallerObj.marshal(component, new File(outputFileName));
     }
 
     private static Configuration generateConfiguration(LaunchConfiguration launchConfiguration, String mainClassName, String fullyQualifiedMainClassName) {
