@@ -1,3 +1,5 @@
+package intellijConfigWriter;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,13 +17,6 @@ public class XmlMainConfiguration implements Serializable {
         this.configuration = configuration;
     }
 
-    @Override
-    public String toString() {
-        return "XmlMain{" +
-                "name='" + name + '\'' +
-                ", configuration=" + configuration +
-                '}';
-    }
 
     public XmlMainConfiguration() {
 

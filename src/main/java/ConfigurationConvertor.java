@@ -1,3 +1,7 @@
+import eclipseConfigReader.LaunchConfiguration;
+import intellijConfigWriter.*;
+import intellijConfigWriter.Module;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -17,8 +21,7 @@ public class ConfigurationConvertor {
         getLaunchConfiguration(launchConfiguration);
     }
 
-    private static LaunchConfiguration getLaunchConfiguration(LaunchConfiguration launchConfiguration) throws JAXBException {
-        LaunchConfiguration launchConfigurationCaller = new LaunchConfiguration();
+    private static void getLaunchConfiguration(LaunchConfiguration launchConfiguration) throws JAXBException {
         JAXBContext jaxbContextInstance = JAXBContext.newInstance(LaunchConfiguration.class);
         Marshaller jaxbMarshaller = jaxbContextInstance.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -34,7 +37,6 @@ public class ConfigurationConvertor {
         marshallerObj.marshal(xmlMainConfiguration, outputStream);
         String outputFileName = mainClassName + "-run-intellij.xml";
         marshallerObj.marshal(xmlMainConfiguration, new File(outputFileName));
-        return launchConfigurationCaller;
     }
 
     private static Configuration generateConfiguration(LaunchConfiguration launchConfiguration, String mainClassName, String fullyQualifiedMainClassName) {

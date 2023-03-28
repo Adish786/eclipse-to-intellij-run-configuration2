@@ -1,3 +1,5 @@
+package eclipseConfigReader;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -16,12 +18,6 @@ public class MapAttribute {
         this.mapEntry = mapEntry;
     }
 
-    @Override
-    public String toString() {
-        return "MapAttribute{" +
-                "mapEntry=" + mapEntry +
-                '}';
-    }
 
     public MapAttribute() {
 

@@ -1,3 +1,5 @@
+package eclipseConfigReader;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -15,12 +17,6 @@ public class ListAttribute {
         this.listEntry = listEntry;
     }
 
-    @Override
-    public String toString() {
-        return "ListAttribute{" +
-                "listEntry=" + listEntry +
-                '}';
-    }
 
     public ListAttribute() {
 

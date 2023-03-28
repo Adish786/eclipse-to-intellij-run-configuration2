@@ -1,3 +1,5 @@
+package intellijConfigWriter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -13,12 +15,6 @@ public class Pattern {
         this.option = option;
     }
 
-    @Override
-    public String toString() {
-        return "Pattern{" +
-                "option=" + option +
-                '}';
-    }
 
     public Pattern() {
     }

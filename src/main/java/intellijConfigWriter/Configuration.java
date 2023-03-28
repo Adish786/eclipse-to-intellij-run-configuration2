@@ -1,3 +1,5 @@
+package intellijConfigWriter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -27,21 +29,6 @@ public class Configuration {
     @XmlElement
     private List<Method> method;
 
-    @Override
-    public String toString() {
-        return "Configuration{" +
-                "defaults='" + defaults + '\'' +
-                ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", factoryName='" + factoryName + '\'' +
-                ", nameIsGenerated='" + nameIsGenerated + '\'' +
-                ", envs=" + envs +
-                ", option=" + option +
-                ", module=" + module +
-                ", extension=" + extension +
-                ", method=" + method +
-                '}';
-    }
 
     public String getDefaults() {
         return defaults;

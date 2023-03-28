@@ -1,3 +1,9 @@
+package eclipseConfigReader;
+
+import eclipseConfigReader.Attribute;
+import eclipseConfigReader.ListAttribute;
+import eclipseConfigReader.MapAttribute;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -14,17 +20,6 @@ public class LaunchConfiguration {
     private List<Attribute> stringAttribute;
 
     public LaunchConfiguration() {
-    }
-
-    @Override
-    public String toString() {
-        return "LaunchConfiguration{" +
-                "type='" + type + '\'' +
-                ", listAttribute=" + listAttribute +
-                ", mapAttribute=" + mapAttribute +
-                ", booleanAttribute=" + booleanAttribute +
-                ", stringAttribute=" + stringAttribute +
-                '}';
     }
 
     public String getLaunchConfiguration() {

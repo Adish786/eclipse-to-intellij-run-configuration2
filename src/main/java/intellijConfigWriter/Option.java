@@ -1,3 +1,5 @@
+package intellijConfigWriter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -18,11 +20,4 @@ public class Option {
         this.value = value;
     }
 
-    @Override
-    public String toString() {
-        return "Option{" +
-                "name='" + name + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
 }

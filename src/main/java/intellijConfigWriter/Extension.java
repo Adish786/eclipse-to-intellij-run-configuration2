@@ -1,3 +1,7 @@
+package intellijConfigWriter;
+
+import intellijConfigWriter.Pattern;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -10,14 +14,6 @@ public class Extension {
     private List<Pattern> patterns;
     @XmlAttribute
     private String name;
-
-    @Override
-    public String toString() {
-        return "Extension{" +
-                "patterns=" + patterns +
-                ", name='" + name + '\'' +
-                '}';
-    }
 
 
 

@@ -1,3 +1,5 @@
+package intellijConfigWriter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -23,14 +25,6 @@ public class Method {
     public Method(List<Option> option, String version) {
         this.option = option;
         this.version = version;
-    }
-
-    @Override
-    public String toString() {
-        return "Method{" +
-                "option=" + option +
-                ", version='" + version + '\'' +
-                '}';
     }
 
     public Method() {
