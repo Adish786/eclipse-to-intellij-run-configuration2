@@ -5,9 +5,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Attribute {
-    @XmlAttribute(name ="key")
+    @XmlAttribute
     private String key;
-    @XmlAttribute(name ="value")
+    @XmlAttribute
     private String value;
     public String getKey() {
         return key;
@@ -24,10 +24,7 @@ public class Attribute {
         this.value = value;
     }
 
-    public Attribute(String key, String value) {
-        this.key = key;
-        this.value = value;
-    }
+
 
 
     @Override

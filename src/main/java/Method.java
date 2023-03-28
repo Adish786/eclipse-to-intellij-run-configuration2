@@ -11,16 +11,9 @@ public class Method {
     @XmlAttribute(name = "v")
     private String version;
 
-    public List<Option> getOption() {
-        return option;
-    }
 
     public void setOption(List<Option> option) {
         this.option = option;
-    }
-
-    public String getVersion() {
-        return version;
     }
 
     public void setVersion(String version) {

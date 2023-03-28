@@ -8,9 +8,6 @@ public class Pattern {
     @XmlElement
     private List<Option> option;
 
-    public List<Option> getOption() {
-        return option;
-    }
 
     public void setOption(List<Option> option) {
         this.option = option;

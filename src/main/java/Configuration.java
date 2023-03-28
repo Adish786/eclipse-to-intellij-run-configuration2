@@ -43,19 +43,6 @@ public class Configuration {
                 '}';
     }
 
-    public Configuration(String defaults, String name, String type, String factoryName, String nameIsGenerated, List<Envs> envs, List<Option> option, Module module, List<Extension> extension, List<Method> method) {
-        this.defaults = defaults;
-        this.name = name;
-        this.type = type;
-        this.factoryName = factoryName;
-        this.nameIsGenerated = nameIsGenerated;
-        this.envs = envs;
-        this.option = option;
-        this.module = module;
-        this.extension = extension;
-        this.method = method;
-    }
-
     public String getDefaults() {
         return defaults;
     }

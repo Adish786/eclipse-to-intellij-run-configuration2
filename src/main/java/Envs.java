@@ -8,15 +8,8 @@ public class Envs {
     @XmlElement
     private List<Env> env;
 
-    public List<Env> getEnv() {
-        return env;
-    }
 
     public void setEnv(List<Env> env) {
-        this.env = env;
-    }
-
-    public Envs(List<Env> env) {
         this.env = env;
     }
 

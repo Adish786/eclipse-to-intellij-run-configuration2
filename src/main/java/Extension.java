@@ -19,21 +19,10 @@ public class Extension {
                 '}';
     }
 
-    public Extension(List<Pattern> patterns, String name) {
-        this.patterns = patterns;
-        this.name = name;
-    }
 
-    public List<Pattern> getPatterns() {
-        return patterns;
-    }
 
     public void setPatterns(List<Pattern> patterns) {
         this.patterns = patterns;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {

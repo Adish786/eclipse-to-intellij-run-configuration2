@@ -18,7 +18,7 @@ public class ConfigurationConvertor {
     }
 
     private static LaunchConfiguration getLaunchConfiguration(LaunchConfiguration launchConfiguration) throws JAXBException {
-        LaunchConfiguration launchConfiguration1 = new LaunchConfiguration();
+        LaunchConfiguration launchConfigurationCaller = new LaunchConfiguration();
         JAXBContext jaxbContextInstance = JAXBContext.newInstance(LaunchConfiguration.class);
         Marshaller jaxbMarshaller = jaxbContextInstance.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -34,7 +34,7 @@ public class ConfigurationConvertor {
         marshallerObj.marshal(xmlMainConfiguration, outputStream);
         String outputFileName = mainClassName + "-run-intellij.xml";
         marshallerObj.marshal(xmlMainConfiguration, new File(outputFileName));
-        return launchConfiguration1;
+        return launchConfigurationCaller;
     }
 
     private static Configuration generateConfiguration(LaunchConfiguration launchConfiguration, String mainClassName, String fullyQualifiedMainClassName) {
@@ -165,8 +165,8 @@ public class ConfigurationConvertor {
         String optionStar = null;
         for (int i = 0; i < stringAttributeNode.getStringAttribute().size(); i++) {
             if (stringAttributeNode.getStringAttribute().get(i).getKey().equals("org.eclipse.jdt.launching.MAIN_TYPE")) {
-                String tech1 = stringAttributeNode.getStringAttribute().get(i).getValue();
-                String[] word = tech1.split("\\.");
+                String stringSplit = stringAttributeNode.getStringAttribute().get(i).getValue();
+                String[] word = stringSplit.split("\\.");
                 int lastWordIndex = word.length - 1;
                 word[lastWordIndex] = "*";
                 optionStar = String.join(".", word);
