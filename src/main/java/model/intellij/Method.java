@@ -22,11 +22,6 @@ public class Method {
         this.version = version;
     }
 
-    public Method(List<Option> option, String version) {
-        this.option = option;
-        this.version = version;
-    }
-
     public Method() {
     }
 }

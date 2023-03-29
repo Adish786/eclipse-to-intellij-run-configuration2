@@ -10,12 +10,9 @@ public class Module {
     private String name;
     @XmlAttribute
     private String value;
-
-
     public void setName(String name) {
         this.name = name;
     }
-
     public void setValue(String value) {
         this.value = value;
     }

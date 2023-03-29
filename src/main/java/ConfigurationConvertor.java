@@ -25,14 +25,14 @@ public class ConfigurationConvertor {
         JAXBContext jaxbContextInstance = JAXBContext.newInstance(LaunchConfiguration.class);
         Marshaller jaxbMarshaller = jaxbContextInstance.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        JAXBContext contextObj = JAXBContext.newInstance(component.class);
+        JAXBContext contextObj = JAXBContext.newInstance(Component.class);
         Marshaller marshallerObj = contextObj.createMarshaller();
         marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshallerObj.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
         String fullyQualifiedMainClassName = getFullQualifiedMainClass(launchConfiguration);
         String mainClassName = getMainClassName(fullyQualifiedMainClassName);
         Configuration configuration = generateConfiguration(launchConfiguration, mainClassName, fullyQualifiedMainClassName);
-        component component = new component("ProjectRunConfigurationManager", configuration);
+        Component component = new Component("ProjectRunConfigurationManager", configuration);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         marshallerObj.marshal(component, outputStream);
         String outputFileName = mainClassName + "-run-intellij.xml";
@@ -167,8 +167,8 @@ public class ConfigurationConvertor {
         String optionStar = null;
         for (int i = 0; i < stringAttributeNode.getStringAttribute().size(); i++) {
             if (stringAttributeNode.getStringAttribute().get(i).getKey().equals("org.eclipse.jdt.launching.MAIN_TYPE")) {
-                String stringSplit = stringAttributeNode.getStringAttribute().get(i).getValue();
-                String[] word = stringSplit.split("\\.");
+                String node = stringAttributeNode.getStringAttribute().get(i).getValue();
+                String[] word = node.split("\\.");
                 int lastWordIndex = word.length - 1;
                 word[lastWordIndex] = "*";
                 optionStar = String.join(".", word);

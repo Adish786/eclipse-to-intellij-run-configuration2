@@ -10,12 +10,9 @@ public class Pattern {
     @XmlElement
     private List<Option> option;
 
-
     public void setOption(List<Option> option) {
         this.option = option;
     }
-
-
     public Pattern() {
     }
 }

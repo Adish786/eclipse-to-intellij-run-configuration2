@@ -6,19 +6,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @XmlRootElement
-public class component implements Serializable {
+public class Component implements Serializable {
     @XmlAttribute
     private String name;
     @XmlElement
     private Configuration configuration;
 
-    public component(String name, Configuration configuration) {
+    public Component(String name, Configuration configuration) {
         this.name = name;
         this.configuration = configuration;
     }
 
 
-    public component() {
+    public Component() {
 
     }
 
