@@ -8,14 +8,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 public class ListEntry {
     @XmlAttribute
     private String value;
-    public String getValue() {
-        return value;
-    }
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-
     public ListEntry() {
 
     }

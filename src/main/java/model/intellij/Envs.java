@@ -9,15 +9,13 @@ import java.util.List;
 public class Envs {
     @XmlElement
     private List<Env> env;
-
-
     public void setEnv(List<Env> env) {
         this.env = env;
     }
-
-
+    public List<Env> getEnv() {
+        return env;
+    }
     public Envs() {
-
     }
 
 }

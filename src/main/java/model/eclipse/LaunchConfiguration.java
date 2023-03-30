@@ -7,7 +7,7 @@ import java.util.List;
 
 @XmlRootElement(name = "launchConfiguration")
 public class LaunchConfiguration {
-    @XmlAttribute(name = "type", required = true)
+    @XmlAttribute
     private String type;
 
     private List<ListAttribute> listAttribute;
@@ -33,7 +33,7 @@ public class LaunchConfiguration {
     public void setListAttribute(List<ListAttribute> listAttribute) {
         this.listAttribute = listAttribute;
     }
-    @XmlElement(name = "mapAttribute")
+    @XmlElement
 
     public MapAttribute getMapAttribute() {
         return mapAttribute;
@@ -42,7 +42,7 @@ public class LaunchConfiguration {
     public void setMapAttribute(MapAttribute mapAttribute) {
         this.mapAttribute = mapAttribute;
     }
-    @XmlElement(name = "booleanAttribute")
+    @XmlElement
     public Attribute getBooleanAttribute() {
         return booleanAttribute;
     }
@@ -50,7 +50,7 @@ public class LaunchConfiguration {
     public void setBooleanAttribute(Attribute booleanAttribute) {
         this.booleanAttribute = booleanAttribute;
     }
-    @XmlElement(name = "stringAttribute")
+    @XmlElement
     public List<Attribute> getStringAttribute() {
         return stringAttribute;
     }

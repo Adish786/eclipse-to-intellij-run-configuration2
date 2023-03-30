@@ -87,7 +87,7 @@ public class ConfigurationConvertor {
         extension.setPatterns(patternList);
         Option optionPattern = new Option();
         optionPattern.setName("PATTERN");
-        String fullQualifiedWithStar = getFullQualifiedWithStar(launchConfiguration);
+        String fullQualifiedWithStar = getFullQualifiedServerPath(launchConfiguration);
         optionPattern.setValue(fullQualifiedWithStar);
         Option optionEnabled = new Option();
         optionEnabled.setName("ENABLED");
@@ -163,7 +163,7 @@ public class ConfigurationConvertor {
         return fullQualifiedServerPath;
     }
 
-    private static String getFullQualifiedWithStar(LaunchConfiguration stringAttributeNode) {
+    private static String getFullQualifiedServerPath(LaunchConfiguration stringAttributeNode) {
         String optionStar = null;
         for (int i = 0; i < stringAttributeNode.getStringAttribute().size(); i++) {
             if (stringAttributeNode.getStringAttribute().get(i).getKey().equals("org.eclipse.jdt.launching.MAIN_TYPE")) {

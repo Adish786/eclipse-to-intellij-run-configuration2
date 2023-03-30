@@ -9,16 +9,6 @@ import java.util.List;
 public class MapAttribute {
     @XmlElement
     private List<MapEntry> mapEntry;
-
-    public List<MapEntry> getMapEntry() {
-        return mapEntry;
-    }
-
-    public void setMapEntry(List<MapEntry> mapEntry) {
-        this.mapEntry = mapEntry;
-    }
-
-
     public MapAttribute() {
 
     }

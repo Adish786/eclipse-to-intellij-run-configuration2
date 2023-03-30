@@ -9,17 +9,7 @@ import java.util.List;
 public class ListAttribute {
     @XmlElement
     private List<ListEntry> listEntry;
-    public List<ListEntry> getListEntry() {
-        return listEntry;
-    }
-
-    public void setListEntry(List<ListEntry> listEntry) {
-        this.listEntry = listEntry;
-    }
-
-
     public ListAttribute() {
-
     }
 
 }
